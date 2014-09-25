@@ -44,9 +44,15 @@ class Contact(Handler):
         self.render('contact.html')
 
 
+class RSS(Handler):
+    def get(self):
+        self.render('rss.xml', posts=dbwrap.post_list)
+
+
 app = webapp2.WSGIApplication([
     ('/', Contents),
     ('/post/([^/]+)', PostHandler),
+    ('/feed/', RSS),
     #('/about/', About),
     #('/contact/', Contact),
 ], debug=True)
