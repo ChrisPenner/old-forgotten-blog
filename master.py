@@ -3,12 +3,6 @@ import dbwrap
 import posts
 from handler import Handler
 
-
-#class Root(Handler):
-    #def get(self):
-        #self.redirect('/blog/')
-
-
 class Contents(Handler):
     def get(self):
         post_list = dbwrap.post_list
@@ -53,6 +47,4 @@ app = webapp2.WSGIApplication([
     ('/', Contents),
     ('/post/([^/]+)', PostHandler),
     ('/feed/', RSS),
-    #('/about/', About),
-    #('/contact/', Contact),
 ], debug=True)
