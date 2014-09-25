@@ -1,0 +1,22 @@
+{% extends "blog.html" %}
+{% block title %}{{post.title}}{% endblock %}
+{% block header %}
+    {% if prev_post %} <a id="leftarrow" class="arrow" href="/post/{{prev_post}}">&larr;</a> {% endif %}
+    {% if next_post %} <a id="rightarrow" class="arrow" href="/post/{{next_post}}">&rarr;</a> {% endif %}
+{% endblock %}
+{% block content %}
+<div class="wrapper">
+    <div class="masthead">
+        <span class="title">
+            {{post.title}}
+        </span>
+        <br>
+        <span class="byline">by {{post.author}}</span>
+        <br>
+        <span class="date">{{post.date}}</span>
+    </div>
+</div>
+<article class="page">
+    {{post.content|safe}}
+</article>
+{% endblock %}

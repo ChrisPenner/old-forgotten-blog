@@ -1,0 +1,16 @@
+{% extends "blog.html" %}
+{% block title %}Table of Contents{% endblock %}
+{% block content %}
+
+
+<section class="table-of-contents">
+    <h1>Table Of Contents</h1>
+    <ul>
+        {% for post in blog_posts %} 
+            <li><a href="/post/{{post.name}}">{{post.title}}<span class="date">{{post.date}}</span></a></li>
+        {% endfor %}
+    </ul>
+</section>
+
+
+{% endblock %}

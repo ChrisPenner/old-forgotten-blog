@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="{% block top_class %}{% endblock %}"> 
+<head>
+    {% block head %}
+    <head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8">
+    <meta name="description" content="The Personal blog and musings of Chris Penner, a designer, developer and future opsimath.">
+    <meta name="author" content="Chris Penner">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    {% endblock %}
+</head>
+<body>
+<header>
+    <nav>
+        <a id="beacon" href="/">CP</a>
+        <!--<div class="nav-bar">-->
+            <!--<a id="blog" href="/blog/">Blog</a>-->
+            <!--<a id="about" href="/about/">About</a>-->
+            <!--<a id="contact" href="/contact/">Contact</a>-->
+        <!--</div>-->
+    </nav>
+    <div id="theme-button">DAY</div>
+    {% block header %}{% endblock %} 
+</header>
+
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+        {% endblock %}
+    </div>
+
+<footer>
+&copy; 2014 Chris Penner
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+<script type="text/javascript">
+if (typeof jQuery == 'undefined') {
+    document.write(unescape("%3Cscript src='js/jquery-1.11.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+</script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
