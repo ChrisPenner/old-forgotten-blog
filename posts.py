@@ -72,18 +72,18 @@ def get_adj_posts(post_name):
 
 
 def parse_date(date):
-    months = {1: 'January',
-              2: 'February',
-              3: 'March',
+    months = {1: 'Jan',
+              2: 'Feb',
+              3: 'Mar',
               4: 'April',
               5: 'May',
               6: 'June',
               7: 'July',
-              8: 'August',
-              9: 'September',
-              10: 'October',
-              11: 'November',
-              12: 'December',
+              8: 'Aug',
+              9: 'Sept',
+              10: 'Oct',
+              11: 'Nov',
+              12: 'Dec',
               }
     pdt = parsedatetime.Calendar()
     sort_date, t = pdt.parse(date)
