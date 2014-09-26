@@ -75,7 +75,7 @@ blockquote {
     }
 }
 
-p {
+p, .page li  {
     font-size: 1em;
     line-height: 1.3em;
     letter-spacing: 0.05em;
@@ -103,6 +103,7 @@ img.photo {
 ul {
     list-style-position: inside;
     list-style: none;
+    margin: 1em 0 1em 1em;
 }
 
 em {
@@ -190,7 +191,6 @@ footer {
         }
     }
 }
-
 
 .blog h2 {
     @extend h2;
@@ -499,7 +499,6 @@ header {
     right: 10px;
     top: calc(50% - 15px);
 }
-
 
 @media only screen and (max-width : 750px){
     header {

@@ -74,7 +74,7 @@ blockquote {
     border-left: 5px solid #eb005b;
     margin: auto; }
 
-p {
+p, .page li {
   font-size: 1em;
   line-height: 1.3em;
   letter-spacing: 0.05em;
@@ -100,7 +100,8 @@ img.photo {
 
 ul {
   list-style-position: inside;
-  list-style: none; }
+  list-style: none;
+  margin: 1em 0 1em 1em; }
 
 em {
   font-weight: bold;
