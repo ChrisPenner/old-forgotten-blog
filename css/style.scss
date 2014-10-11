@@ -48,6 +48,13 @@ html {
         }
 }
 
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-height: 100vh;
+}
+
 h2 {
     font-family: inherit;
     font-size: 1.25em;
@@ -59,18 +66,19 @@ h2 {
 
 blockquote {
     /*display: inline;*/
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    margin: 0.7em auto;
     text-align: center;
     padding-left: 0.5em;
     font-size: 1.3em;
+    font-style: italic;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
 
     &>p{
         padding-left: 7px;
-        border-left: 5px solid $accent;
+        border-left: 5px solid $gray;
         margin: auto;
     }
 }
@@ -240,10 +248,13 @@ footer {
 
 }
 
-.page {
+article {
+    display: flex;
+    flex-flow: column nowrap;
     width: auto;
     min-width: 100px;
     max-width: 600px;
+    /*min-height: 100%;*/
     padding: 0px 20px;
     margin: auto;
     transition: color 2s;
@@ -272,9 +283,9 @@ footer {
 
 .table-of-contents {
     clear: both;
-    margin: 9em auto;
+    margin: 5em auto 0 auto;
     width: 100%;
-
+    /*min-height: 100%;*/
 
     h1{
         font-size: 3em;
@@ -353,16 +364,10 @@ footer {
 
 header {
     position: fixed;
-    background: rgba(255, 255, 255, 0.95);
-    /*background: $gray;*/
     /*color: $night-white;*/
     top: 0;
     height: 4em;
     width: 100%;
-}
-
-.dark header {
-    background: rgba(50, 50, 50, 0.95);
 }
 
 #beacon {
@@ -466,17 +471,15 @@ header {
     opacity: 0.7;
     transition: background 0.5s, opacity 0.5s, width 0.5s;
     cursor: pointer;
-}
 
-.arrow:hover {
-    display: table-cell;
-    vertical-align: middle;
-    box-sizing: border-box;
-    width: 2em;
-    color: $accent;
-    border: 1px solid $accent;
-    opacity: 0.9;
-    background: $day-white;
+    &:hover {
+        box-sizing: border-box;
+        width: 2em;
+        color: $accent;
+        border: 1px solid $accent;
+        opacity: 0.9;
+        background: $day-white;
+    }
 }
 
 .dark .arrow {
@@ -498,6 +501,25 @@ header {
     position: fixed;
     right: 10px;
     top: calc(50% - 15px);
+}
+
+.social-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 1em 0;
+
+    &>div{
+        /*margin: 0 1em;*/
+    }
+
+    .twitter-share-button {
+        max-width: 90px;
+    }
+
+    .twitter-follow-button {
+        max-width: 70px;
+    }
 }
 
 @media only screen and (max-width : 750px){
