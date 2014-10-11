@@ -23,6 +23,7 @@ class PostHandler(Handler):
                         post=post,
                         prev_post=prev_post,
                         next_post=next_post,
+                        url=self.request.url,
                         )
         else:
             self.redirect('/')

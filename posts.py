@@ -10,7 +10,6 @@ class Post(object):
         date, sort_date = parse_date(date)
         self.date = date
         self.sort_date = sort_date
-
         self.title = title
         self.name = name
         self.author = author
