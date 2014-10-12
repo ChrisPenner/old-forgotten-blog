@@ -2,18 +2,21 @@ import dbwrap
 
 from lib import markdown2
 from lib import parsedatetime
+import datetime
 import os
 
 
 class Post(object):
     def __init__(self, title='', name='', content='', date='', author='', **kwargs):
-        date, sort_date = parse_date(date)
+        date, sort_date, pub_date = parse_date(date)
         self.date = date
         self.sort_date = sort_date
+        self.pub_date = pub_date
         self.title = title
         self.name = name
         self.author = author
         self.content = content
+        self.link = "http://www.chrispenner.ca/post/" + name
 
 
 def init():
@@ -90,6 +93,9 @@ def parse_date(date):
     month = months[sort_date[1]]
     day = str(sort_date[2])
 
+    date_obj = datetime.date(sort_date[0], sort_date[1], sort_date[2])
+    pub_date = date_obj.strftime("%a, %d %b %Y %H:%M:%S GMT")
+
     if day[-1] == '1':
         suffix = 'st'
     elif day[-1] == '2':
@@ -105,7 +111,8 @@ def parse_date(date):
         'suffix': suffix,
         'year': year,
         }
-    return date, sort_date
+
+    return date, sort_date, pub_date
 
 
 init()

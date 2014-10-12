@@ -3,6 +3,7 @@ import dbwrap
 import posts
 from handler import Handler
 
+
 class Contents(Handler):
     def get(self):
         post_list = dbwrap.post_list
@@ -41,11 +42,12 @@ class Contact(Handler):
 
 class RSS(Handler):
     def get(self):
+        self.response.headers['Content-Type'] = "application/rss+xml"
         self.render('rss.xml', posts=dbwrap.post_list)
 
 
 app = webapp2.WSGIApplication([
     ('/', Contents),
     ('/post/([^/]+)', PostHandler),
-    ('/feed/', RSS),
+    ('/feed', RSS),
 ], debug=True)

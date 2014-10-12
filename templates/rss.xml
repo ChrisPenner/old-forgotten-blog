@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
-  <title>Chris Penner Blog</title>
+  <title>Chris Penner</title>
   <link>http://www.chrispenner.ca</link>
+  <atom:link href="http://www.chrispenner.ca/feed" rel="self" type="application/rss+xml" />
   <description>The Personal blog and musings of Chris Penner, a designer, developer and future opsimath.</description>
   <category>Technology</category>
   <copyright>2014 Chris Penner</copyright>
@@ -10,10 +11,14 @@
   {% for post in posts %}
   <item>
       <title>{{post.title}}</title>
-      <author>{{post.author}}</author>
+      <author>chris@chrispenner.ca (Chris Penner)</author>
       <link>{{post.link}}</link>
-      <pubDate>{{post.pubDate}}</pubDate>
+      <guid>{{post.link}}</guid>
+      <pubDate>{{post.pub_date}}</pubDate>
       <description>{{post.content[0:140]|striptags}}...</description>
+      <content:encoded><![CDATA[
+          {{post.content}}
+      ]]></content:encoded>
   </item>
   {% endfor %}
 </channel>
