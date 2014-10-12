@@ -46,14 +46,14 @@ def init():
 
                 elif line.lower().startswith('categories'):
                     line_contents = line.lower().replace('categories:', '').strip()
-                    categories = line_contents.split(',')
+                    categories = line_contents.split(' ')
                     categories = map(str.strip, categories)
                     categories = filter(lambda x: '' != x, categories)
                     post_info['categories'] = set(categories)
 
                 elif line.lower().startswith('tags'):
                     line_contents = line.lower().replace('tags:', '').strip()
-                    tags = line_contents.split(',')
+                    tags = line_contents.split(' ')
                     tags = map(str.strip, tags)
                     tags = filter(lambda x: '' != x, tags)
                     post_info['tags'] = set(tags)
