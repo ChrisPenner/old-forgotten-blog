@@ -3,11 +3,16 @@ from google.appengine.api import memcache
 
 post_dict = {}
 post_list = []
+tags = set()
+categories = set()
 
 
 def put(name, post):
+    global post_dict, post_list, tags, categories
     post_dict[name] = post
     post_list.append(post)
+    tags = tags.union(post.tags)
+    categories = categories.union(post.categories)
     sort_post_list()
 
 

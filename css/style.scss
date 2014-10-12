@@ -239,13 +239,30 @@ footer {
     font-size: 1em;
 }
 
+.metadata {
+    text-align: center;
+}
+
 .date {
    color: hsla(0, 0%, 50%, 0.5);
    font-size: 0.9em;
    font-style: italic;
    line-height: 2em;
    font-family: helvetica, sans-serif;
+}
 
+.categories, .tags {
+   color: hsla(0, 0%, 50%, 0.5);
+   font-size: 0.9em;
+   font-style: italic;
+   line-height: 2em;
+   font-family: helvetica, sans-serif;
+   a {
+       color: $accent;
+       &:hover {
+           text-decoration: underline;
+       }
+   }
 }
 
 article {
@@ -329,13 +346,15 @@ article {
 }
 
 .dark .table-of-contents {
-    a {
-        color: $night-white;
+    ul {
+        a {
+            color: $night-white;
 
-        &:hover {
-            background: $night-white;
-            color: $night-black;
-            padding-left: 2em;
+            &:hover {
+                background: $night-white;
+                color: $night-black;
+                padding-left: 2em;
+            }
         }
     }
 }

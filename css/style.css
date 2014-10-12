@@ -246,12 +246,26 @@ footer {
   font-weight: 100;
   font-size: 1em; }
 
+.metadata {
+  text-align: center; }
+
 .date {
   color: rgba(128, 128, 128, 0.5);
   font-size: 0.9em;
   font-style: italic;
   line-height: 2em;
   font-family: helvetica, sans-serif; }
+
+.categories, .tags {
+  color: rgba(128, 128, 128, 0.5);
+  font-size: 0.9em;
+  font-style: italic;
+  line-height: 2em;
+  font-family: helvetica, sans-serif; }
+  .categories a, .tags a {
+    color: #eb005b; }
+    .categories a:hover, .tags a:hover {
+      text-decoration: underline; }
 
 article {
   display: -webkit-box;
@@ -318,9 +332,9 @@ article {
         color: #fffffc;
         padding-left: 2em; }
 
-.dark .table-of-contents a {
+.dark .table-of-contents ul a {
   color: #dddddd; }
-  .dark .table-of-contents a:hover {
+  .dark .table-of-contents ul a:hover {
     background: #dddddd;
     color: #333333;
     padding-left: 2em; }

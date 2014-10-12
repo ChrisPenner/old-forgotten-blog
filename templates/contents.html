@@ -4,7 +4,27 @@
 
 
 <section class="table-of-contents">
-    <h1>Table Of Contents</h1>
+    <h1>{{heading|title}}</h1>
+    <div class="metadata">
+        {% if categories|length > 0 %}
+            <br>
+            <span class="categories">
+                Categories: 
+                {% for c in categories %}
+                    <a href="/category/{{c}}">{{c|capitalize}},</a>
+                {% endfor %}
+            </span>
+        {% endif %}
+        {% if tags|length > 0 %}
+            <br>
+            <span class="tags">
+                Tags: 
+                {% for t in tags %}
+                    <a href="/tag/{{t}}">{{t|capitalize}},</a>
+                {% endfor %}
+            </span>
+        {% endif %}
+    </div>
     <ul>
         {% for post in blog_posts %} 
             <li><a href="/post/{{post.name}}">{{post.title}}<span class="date">{{post.date}}</span></a></li>

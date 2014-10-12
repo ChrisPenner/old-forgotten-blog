@@ -14,6 +14,24 @@
         <span class="byline">by {{post.author}}</span>
         <br>
         <span class="date">{{post.date}}</span>
+        {% if post.categories|length > 0 %}
+            <br>
+            <span class="categories">
+                Categories: 
+                {% for c in post.categories|sort %}
+                    <a href="/category/{{c}}">{{c|capitalize}},</a>
+                {% endfor %}
+            </span>
+        {% endif %}
+        {% if post.tags|length > 0 %}
+            <br>
+            <span class="tags">
+                Tagged: 
+                {% for t in post.tags|sort %}
+                    <a href="/tag/{{t}}">{{t|capitalize}},</a>
+                {% endfor %}
+            </span>
+        {% endif %}
     </div>
 </div>
 <article class="page">

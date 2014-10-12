@@ -7,7 +7,10 @@ from handler import Handler
 class Contents(Handler):
     def get(self):
         post_list = dbwrap.post_list
-        self.render("contents.html", blog_posts=post_list)
+        tags = sorted(dbwrap.tags)
+        categories = sorted(dbwrap.categories)
+        self.render("contents.html", heading="All Posts", blog_posts=post_list,
+                    tags=tags, categories=categories)
 
 
 class PostHandler(Handler):
@@ -30,6 +33,38 @@ class PostHandler(Handler):
             self.redirect('/')
 
 
+class TagHandler(Handler):
+    def get(self, tag):
+        if not tag:
+            self.redirect('/')
+
+        tags = sorted(dbwrap.tags)
+        categories = sorted(dbwrap.categories)
+        tag = tag.lower()
+        posts = dbwrap.post_list
+        related_posts = filter(lambda p: tag in p.tags, posts)
+        if len(related_posts) == 0:
+            self.redirect('/')
+        self.render("contents.html", heading=tag, blog_posts=related_posts,
+                    tags=tags, categories=categories)
+
+
+class CategoryHandler(Handler):
+    def get(self, category):
+        if not category:
+            self.redirect('/')
+
+        tags = sorted(dbwrap.tags)
+        categories = sorted(dbwrap.categories)
+        category = category.lower()
+        posts = dbwrap.post_list
+        related_posts = filter(lambda c: category in c.categories, posts)
+        if len(related_posts) == 0:
+            self.redirect('/')
+        self.render("contents.html", heading=category, blog_posts=related_posts,
+                    tags=tags, categories=categories)
+
+
 class About(Handler):
     def get(self):
         self.render('about.html')
@@ -49,5 +84,7 @@ class RSS(Handler):
 app = webapp2.WSGIApplication([
     ('/', Contents),
     ('/post/([^/]+)', PostHandler),
+    ('/tag/([^/]+)', TagHandler),
+    ('/category/([^/]+)', CategoryHandler),
     ('/feed', RSS),
 ], debug=True)

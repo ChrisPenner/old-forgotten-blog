@@ -7,7 +7,9 @@ import os
 
 
 class Post(object):
-    def __init__(self, title='', name='', content='', date='', author='', **kwargs):
+    def __init__(self, title='', name='', content='', date='', author='',
+                 tags=set(), categories=set(), **kwargs
+                 ):
         date, sort_date, pub_date = parse_date(date)
         self.date = date
         self.sort_date = sort_date
@@ -17,6 +19,8 @@ class Post(object):
         self.author = author
         self.content = content
         self.link = "http://www.chrispenner.ca/post/" + name
+        self.tags = tags
+        self.categories = categories
 
 
 def init():
@@ -39,6 +43,20 @@ def init():
 
                 elif line.lower().startswith('author'):
                     post_info['author'] = line.replace('author:', '').strip()
+
+                elif line.lower().startswith('categories'):
+                    line_contents = line.lower().replace('categories:', '').strip()
+                    categories = line_contents.split(',')
+                    categories = map(str.strip, categories)
+                    categories = filter(lambda x: '' != x, categories)
+                    post_info['categories'] = set(categories)
+
+                elif line.lower().startswith('tags'):
+                    line_contents = line.lower().replace('tags:', '').strip()
+                    tags = line_contents.split(',')
+                    tags = map(str.strip, tags)
+                    tags = filter(lambda x: '' != x, tags)
+                    post_info['tags'] = set(tags)
 
             s = f.read()
             content = md.convert(s)
