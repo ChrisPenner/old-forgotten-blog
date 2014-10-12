@@ -2,6 +2,7 @@ Blog
 =======
 My current blog framework (and full blog). Feel free to replace the posts in 'content/posts/' with your own, run it on Google App Engine and it should format everything properly.
 
+##Post Format:
 ```
 title: My Title
 author: My Author
