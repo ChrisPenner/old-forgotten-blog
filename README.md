@@ -1,11 +1,12 @@
-appspot
+Blog
 =======
-Simply drop any markdown formatted file in the 'content/posts' folder, the script parses the first few lines looking for title, author, and date information then runs markdown on the rest. Format title, author, date info as follows (followed by an empty line).
+My current blog framework (and full blog). Feel free to replace the posts in 'content/posts/' with your own, run it on Google App Engine and it should format everything properly.
 
 ```
 title: My Title
 author: My Author
 date: August 2nd 2014
+tags: awesome, words, here,
 
-<content goes here>
+<markdown formatted content goes here>
 ```
