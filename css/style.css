@@ -1,5 +1,5 @@
 /* CSS Reset */
-html, body, div, span, object, h1, h2, .blog h2, h3, h4, h5, h6, p, a, abbr, acronym, em, img, ol, ul, li {
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, a, abbr, acronym, em, img, ol, ul, li {
   border: 0;
   font-weight: inherit;
   font-style: inherit;
@@ -57,13 +57,16 @@ body {
   justify-content: center;
   min-height: 100vh; }
 
-h2, .blog h2 {
+h2 {
   font-family: inherit;
   font-size: 1.25em;
   font-variant: small-caps;
   text-align: center;
   width: 80%;
-  margin: 0 auto 0; }
+  margin: 0 auto 0;
+  border-top: 1px solid #777;
+  margin-top: 1em;
+  padding: 1em 0 0 0; }
 
 blockquote {
   /*display: inline;*/
@@ -104,9 +107,9 @@ p + p {
   margin-top: 1em; }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin: 0.5em 0;
-  text-decoration: underline; }
+  text-align: center; }
 
 img.photo {
   border-radius: 25px;
@@ -123,14 +126,17 @@ em {
   font-style: italic; }
 
 a, a:visited, a:hover {
-  color: inherit;
-  text-decoration: none; }
-
-p a, p a:visited {
-  font-weight: bold;
   color: #eb005b;
+  text-decoration: none;
+  font-weight: bold;
   -webkit-transition: color 0.1s;
   transition: color 0.1s; }
+  a:hover, a:visited:hover, a:hover:hover {
+    color: #eb0978;
+    text-decoration: underline; }
+
+p a, p a:visited {
+  color: #eb005b; }
 
 p a:hover {
   text-decoration: underline;
@@ -214,11 +220,6 @@ footer {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
-.blog h2 {
-  border-top: 1px solid #777;
-  margin-top: 1em;
-  padding: 1em 0 0 0; }
-
 .blog .wrapper {
   display: table;
   width: 100%;
@@ -262,10 +263,6 @@ footer {
   font-style: italic;
   line-height: 2em;
   font-family: helvetica, sans-serif; }
-  .categories a, .tags a {
-    color: #eb005b; }
-    .categories a:hover, .tags a:hover {
-      text-decoration: underline; }
 
 article {
   display: -webkit-box;
@@ -312,6 +309,7 @@ article {
     width: 100%; }
     .table-of-contents li a {
       color: #333333;
+      font-weight: normal;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -330,6 +328,7 @@ article {
       .table-of-contents li a:hover {
         background: #333333;
         color: #fffffc;
+        text-decoration: none;
         padding-left: 2em; }
 
 .dark .table-of-contents ul a {
@@ -375,9 +374,11 @@ header {
   border-radius: 0.1em;
   opacity: 0.4;
   -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s; }
+  transition: opacity 0.5s;
+  color: inherit; }
   #beacon:hover {
-    opacity: 1; }
+    opacity: 1;
+    text-decoration: none; }
 
 .nav-bar {
   margin: auto;
@@ -549,7 +550,7 @@ header {
       border-bottom: ridge #53c245 3px; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
-  h2, .blog h2 {
+  h2 {
     border-top: 3px solid #777; }
 
   .page {

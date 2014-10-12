@@ -62,6 +62,9 @@ h2 {
     text-align: center;
     width: 80%;
     margin: 0 auto 0;
+    border-top: 1px solid #777;
+    margin-top: 1em;
+    padding: 1em 0 0 0;
 }
 
 blockquote {
@@ -97,9 +100,9 @@ p+p {
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin: 0.5em 0;
-    text-decoration: underline;
+    text-align: center;
 }
 
 img.photo {
@@ -120,14 +123,18 @@ em {
 }
 
 a, a:visited, a:hover {
-    color: inherit;
+    color: $accent;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.1s;
+    &:hover {
+        color: $accent-light;
+        text-decoration: underline;
+    }
 }
 
 p a, p a:visited {
-    font-weight: bold;
     color: $accent;
-    transition: color 0.1s;
 }
 
 p a:hover {
@@ -200,13 +207,6 @@ footer {
     }
 }
 
-.blog h2 {
-    @extend h2;
-    border-top: 1px solid #777;
-    margin-top: 1em;
-    padding: 1em 0 0 0;
-}
-
 .blog .wrapper {
     display: table;
     width: 100%;
@@ -257,12 +257,6 @@ footer {
    font-style: italic;
    line-height: 2em;
    font-family: helvetica, sans-serif;
-   a {
-       color: $accent;
-       &:hover {
-           text-decoration: underline;
-       }
-   }
 }
 
 article {
@@ -319,6 +313,7 @@ article {
         width: 100%;
         a {
             color: $day-black;
+            font-weight: normal;
             box-sizing: border-box;
             border-top: 1px solid #444;
             display: block;
@@ -338,6 +333,7 @@ article {
             &:hover {
                 background: $day-black;
                 color: $day-white;
+                text-decoration: none;
                 padding-left: 2em;
             }
 
@@ -399,9 +395,11 @@ header {
     border-radius: 0.1em;
     opacity: 0.4;
     transition: opacity 0.5s;
+    color: inherit;
 
     &:hover {
         opacity: 1;
+        text-decoration: none;
     }
 }
 
