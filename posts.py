@@ -24,10 +24,11 @@ class Post(object):
         self.tags = tags
         self.categories = categories
         self.template = template
-        allowed_values = ("platform", "language", "state", "sites", "type")
+        allowed_values = ('platforms', 'language', 'state', 'sites',
+                          'type', 'program', 'links',)
         for key, value in kwargs.iteritems():
             if key in allowed_values:
-                self.setattr(key, value)
+                setattr(self, key, value)
 
 
 def init():
@@ -52,6 +53,15 @@ def init():
                         value = value.split(' ')
                         value = map(str.strip, value)
                         value = filter(lambda x: '' != x, value)
+                    if key == 'links':
+                        links = value.split(',')
+                        html_links = []
+                        for link in links:
+                            (text, href) = link.split('|')
+                            html_link = '<a href="%s"> %s </a>' %(href, text)
+                            html_links.append(html_link)
+                        html_links = filter(lambda x: '' != x, html_links)
+                        value = ','.join(html_links)
                     post_info[key] = value
 
             s = f.read()
