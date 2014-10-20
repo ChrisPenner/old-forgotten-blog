@@ -5,6 +5,7 @@
     {% if next_post %} <a id="rightarrow" class="arrow" href="/post/{{next_post}}">&rarr;</a> {% endif %}
 {% endblock %}
 {% block content %}
+{% block masthead %}
 <div class="wrapper">
     <div class="masthead">
         <span class="title">
@@ -34,6 +35,7 @@
         {% endif %}
     </div>
 </div>
+{% endblock %}
 <article class="page">
     {{post.content|safe}}
 

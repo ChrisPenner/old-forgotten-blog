@@ -1,4 +1,5 @@
 import dbwrap
+import re
 
 from lib import markdown2
 from lib import parsedatetime
@@ -8,6 +9,7 @@ import os
 
 class Post(object):
     def __init__(self, title='', name='', content='', date='', author='',
+                 template='post.html',
                  tags=set(), categories=set(), **kwargs
                  ):
         date, sort_date, pub_date = parse_date(date)
@@ -21,6 +23,11 @@ class Post(object):
         self.link = "http://www.chrispenner.ca/post/" + name
         self.tags = tags
         self.categories = categories
+        self.template = template
+        allowed_values = ("platform", "language", "state", "sites", "type")
+        for key, value in kwargs.iteritems():
+            if key in allowed_values:
+                self.setattr(key, value)
 
 
 def init():
@@ -35,28 +42,17 @@ def init():
             post_info = {}
             while not line.startswith('\n'):
                 line = f.readline()
-                if line.lower().startswith('title'):
-                    post_info['title'] = line.replace('title:', '').strip()
-
-                elif line.lower().startswith('date'):
-                    post_info['date'] = line.replace('date:', '').strip()
-
-                elif line.lower().startswith('author'):
-                    post_info['author'] = line.replace('author:', '').strip()
-
-                elif line.lower().startswith('categories'):
-                    line_contents = line.lower().replace('categories:', '').strip()
-                    categories = line_contents.split(' ')
-                    categories = map(str.strip, categories)
-                    categories = filter(lambda x: '' != x, categories)
-                    post_info['categories'] = set(categories)
-
-                elif line.lower().startswith('tags'):
-                    line_contents = line.lower().replace('tags:', '').strip()
-                    tags = line_contents.split(' ')
-                    tags = map(str.strip, tags)
-                    tags = filter(lambda x: '' != x, tags)
-                    post_info['tags'] = set(tags)
+                # Check if it's a parameter line
+                m = re.match(r'^(?P<key>\w+): (?P<value>.+)', line)
+                if m:
+                    gd = m.groupdict()
+                    key = gd['key'].lower()
+                    value = gd['value'].strip()
+                    if key == 'tags' or key == 'categories':
+                        value = value.split(' ')
+                        value = map(str.strip, value)
+                        value = filter(lambda x: '' != x, value)
+                    post_info[key] = value
 
             s = f.read()
             content = md.convert(s)
