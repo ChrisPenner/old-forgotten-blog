@@ -8,6 +8,11 @@
   <category>Technology</category>
   <copyright>2014 Chris Penner</copyright>
   <language>en-us</language>
+  <image>
+    <url>http://www.chrispenner.ca/images/favicon.png</url>
+    <title>Chris Penner</title>
+    <link>http://www.chrispenner.ca</link>
+  </image>
   {% for post in posts %}
   <item>
       <title>{{post.title}}</title>
@@ -17,7 +22,10 @@
       <pubDate>{{post.pub_date}}</pubDate>
       <description>{{post.content[0:140]|striptags}}...</description>
       <content:encoded><![CDATA[
-          {{post.content}}
+          {% if post.image %}
+              <img src="http://www.chrispenner.com/images/{{post.image}}" alt="">
+          {% endif %}
+          {{post.content|safe}}
       ]]></content:encoded>
   </item>
   {% endfor %}

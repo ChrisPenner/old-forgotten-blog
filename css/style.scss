@@ -97,6 +97,12 @@ em {
     font-style: italic;
 }
 
+img {
+    margin: auto;
+    height: 300px;
+    width: 300px;
+}
+
 a, a:visited, a:hover {
     color: $accent;
     text-decoration: none;
@@ -125,7 +131,6 @@ footer {
 }
 
 // Class Selectors
-// ID Selectors
 
 .photo {
     border-radius: 25px;
@@ -154,10 +159,9 @@ footer {
 }
 
 .masthead {
-    //100vh, 100 vw
     height: 500px;
     width: 100%;
-    padding: 10px;
+    padding: 4em 10px;
     vertical-align: middle;
     display: table-cell;
     text-align: center;
@@ -192,7 +196,7 @@ footer {
     max-width: 600px;
     /*min-height: 100%;*/
     padding: 0px 20px;
-    margin: auto;
+    margin: 3em auto;
     transition: color 2s;
 
     p {
@@ -319,6 +323,8 @@ footer {
         border: 1px solid $accent;
         opacity: 0.9;
         background: $day-white;
+        transition: background 0.5s, opacity 0.5s, width 0.5s;
+        text-decoration: none;
     }
 
     .dark &{
@@ -350,7 +356,52 @@ footer {
     }
 }
 
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.monochrome {
+    color: $day-black;
+    .dark &  {
+        color: $night-white;
+    }
+}
+
+.gem-info {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: auto;
+    align-items: center;
+
+    table{
+        border: 1px solid $day-black;
+        border-collapse: collapse;
+
+        td{
+            border: 1px solid $day-black;
+            padding: 0.4em 1em;
+        }
+    }
+}
+
+.pager-title {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    span {
+        text-align: center;
+    }
+}
+
+.pager{
+    article{
+        margin-top: 2em;
+    }
+}
+
 // ID Selectors
+
 #theme-button {
     text-transform: uppercase;
     font-family: $thin;
@@ -395,12 +446,14 @@ footer {
     position: fixed;
     left: 5px;
     top: calc(50% - 15px);
+    text-decoration: none;
 }
 
 #rightarrow {
     position: fixed;
     right: 10px;
     top: calc(50% - 15px);
+    text-decoration: none;
 }
 
 @media only screen and (max-width : 750px){

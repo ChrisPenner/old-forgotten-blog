@@ -25,7 +25,7 @@ class Post(object):
         self.categories = categories
         self.template = template
         allowed_values = ('platforms', 'language', 'state', 'sites',
-                          'type', 'program', 'links',)
+                          'type', 'program', 'links', 'image',)
         for key, value in kwargs.iteritems():
             if key in allowed_values:
                 setattr(self, key, value)
@@ -52,6 +52,7 @@ def init():
                     if key == 'tags' or key == 'categories':
                         value = value.split(' ')
                         value = map(str.strip, value)
+                        value = map(str.lower, value)
                         value = filter(lambda x: '' != x, value)
                     if key == 'links':
                         links = value.split(',')

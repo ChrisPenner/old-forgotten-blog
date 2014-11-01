@@ -101,6 +101,11 @@ em {
   font-weight: bold;
   font-style: italic; }
 
+img {
+  margin: auto;
+  height: 300px;
+  width: 300px; }
+
 a, a:visited, a:hover {
   color: #eb005b;
   text-decoration: none;
@@ -150,7 +155,7 @@ footer {
 .masthead {
   height: 500px;
   width: 100%;
-  padding: 10px;
+  padding: 4em 10px;
   vertical-align: middle;
   display: table-cell;
   text-align: center;
@@ -186,7 +191,7 @@ footer {
   max-width: 600px;
   /*min-height: 100%;*/
   padding: 0px 20px;
-  margin: auto;
+  margin: 3em auto;
   -webkit-transition: color 2s;
   transition: color 2s; }
   .page p {
@@ -301,7 +306,10 @@ footer {
     color: #eb005b;
     border: 1px solid #eb005b;
     opacity: 0.9;
-    background: #fffffc; }
+    background: #fffffc;
+    -webkit-transition: background 0.5s, opacity 0.5s, width 0.5s;
+    transition: background 0.5s, opacity 0.5s, width 0.5s;
+    text-decoration: none; }
   .dark .arrow {
     background: #222; }
     .dark .arrow:hover {
@@ -327,6 +335,53 @@ footer {
     max-width: 90px; }
   .social-buttons .twitter-follow-button {
     max-width: 70px; }
+
+.center {
+  text-align: center;
+  margin: auto; }
+
+.monochrome {
+  color: #333333; }
+  .dark .monochrome {
+    color: #dddddd; }
+
+.gem-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  margin: auto;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .gem-info table {
+    border: 1px solid #333333;
+    border-collapse: collapse; }
+    .gem-info table td {
+      border: 1px solid #333333;
+      padding: 0.4em 1em; }
+
+.pager-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .pager-title span {
+    text-align: center; }
+
+.pager article {
+  margin-top: 2em; }
 
 #theme-button {
   text-transform: uppercase;
@@ -366,13 +421,15 @@ footer {
   position: fixed;
   left: 5px;
   top: -webkit-calc(50% - 15px);
-  top: calc(50% - 15px); }
+  top: calc(50% - 15px);
+  text-decoration: none; }
 
 #rightarrow {
   position: fixed;
   right: 10px;
   top: -webkit-calc(50% - 15px);
-  top: calc(50% - 15px); }
+  top: calc(50% - 15px);
+  text-decoration: none; }
 
 @media only screen and (max-width: 750px) {
   header {
