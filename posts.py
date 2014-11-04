@@ -9,7 +9,6 @@ import os
 
 class Post(object):
     def __init__(self, title='', name='', content='', date='', author='',
-                 template='post.html',
                  tags=set(), categories=set(), **kwargs
                  ):
         date, sort_date, pub_date = parse_date(date)
@@ -23,7 +22,6 @@ class Post(object):
         self.link = "http://www.chrispenner.ca/post/" + name
         self.tags = tags
         self.categories = categories
-        self.template = template
         allowed_values = ('platforms', 'language', 'state', 'sites',
                           'type', 'program', 'links', 'image',)
         for key, value in kwargs.iteritems():

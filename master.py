@@ -24,7 +24,7 @@ class PostHandler(Handler):
         if post_name in post_dict:
             post = dbwrap.get_post(post_name)
             prev_post, next_post = posts.get_adj_posts(post_name)
-            self.render(post.template,
+            self.render("post-page.html",
                         post=post,
                         prev_post=prev_post,
                         next_post=next_post,

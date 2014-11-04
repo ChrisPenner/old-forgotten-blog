@@ -1,10 +1,3 @@
-{% extends "blog.html" %}
-{% block title %}{{post.title}}{% endblock %}
-{% block header %}
-    {% if prev_post %} <a id="leftarrow" class="arrow" href="/post/{{prev_post}}">&larr;</a> {% endif %}
-    {% if next_post %} <a id="rightarrow" class="arrow" href="/post/{{next_post}}">&rarr;</a> {% endif %}
-{% endblock %}
-{% block content %}
 {% block masthead %}
 <div class="wrapper">
     <div class="masthead">
@@ -12,6 +5,10 @@
             {{post.title}}
         </span>
         <br>
+        {% if post.image %}
+    <img style="height:auto; width:auto; max-width:400px;" src="/images/{{post.image}}" alt="{{post.program}} Logo">
+        <br>
+        {% endif %}
         <span class="byline">by {{post.author}}</span>
         <br>
         <span class="date">{{post.date}}</span>
@@ -35,10 +32,12 @@
         {% endif %}
     </div>
 </div>
-{% endblock %}
+{% endblock masthead %}
+{% include "gem-info.html" with context %}
 <article class="page">
     {{post.content|safe}}
 
+</article>
 <div class="social-buttons">
     <a href="https://twitter.com/share" class="twitter-share-button" data-via="chrislpenner" data-dnt="true">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -46,5 +45,3 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <div class="fb-like" data-href="{{url}}" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 </div>
-</article>
-{% endblock %}

@@ -3,7 +3,6 @@ author: Chris Penner
 date: Oct. 15th 2014
 tags: open-source text-editor vim mac linux
 categories: Open-source-gems
-template: gem.html
 language: VimL, C
 platforms: Mac, Linux
 state: Pre-beta

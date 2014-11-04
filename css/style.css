@@ -102,9 +102,7 @@ em {
   font-style: italic; }
 
 img {
-  margin: auto;
-  height: 300px;
-  width: 300px; }
+  margin: auto; }
 
 a, a:visited, a:hover {
   color: #eb005b;
@@ -134,7 +132,7 @@ footer {
   border-radius: 25px;
   border: 1px solid black; }
 
-.blog .wrapper {
+.blog {
   display: table;
   width: 100%;
   height: 100%;
@@ -152,12 +150,43 @@ footer {
   font-weight: 100;
   font-size: 1em; }
 
-.masthead {
-  height: 500px;
+.wrapper {
   width: 100%;
-  padding: 4em 10px;
-  vertical-align: middle;
-  display: table-cell;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.masthead {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: space-around;
+  -webkit-align-items: space-around;
+  -ms-flex-align: space-around;
+  align-items: space-around;
+  width: 100%;
+  min-height: 500px;
+  padding: 2em 10px;
   text-align: center;
   margin: auto; }
 
@@ -473,4 +502,4 @@ footer {
     line-height: 0.1em; } }
 @media only screen and (max-height: 450px) {
   .masthead {
-    height: 400px; } }
+    min-height: 400px; } }

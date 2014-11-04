@@ -1,0 +1,9 @@
+{% extends "blog.html" %}
+{% block title %}{{post.title}}{% endblock %}
+{% block header %}
+    {% if prev_post %} <a id="leftarrow" class="arrow" href="/post/{{prev_post}}">&larr;</a> {% endif %}
+    {% if next_post %} <a id="rightarrow" class="arrow" href="/post/{{next_post}}">&rarr;</a> {% endif %}
+{% endblock %}
+{% block content %}
+    {% include "post.html" with context %}
+{% endblock %}
