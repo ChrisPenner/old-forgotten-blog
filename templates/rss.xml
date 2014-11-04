@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
 <channel>
   <title>Chris Penner</title>
   <link>http://www.chrispenner.ca</link>
@@ -21,9 +21,12 @@
       <guid>{{post.link}}</guid>
       <pubDate>{{post.pub_date}}</pubDate>
       <description>{{post.content[0:140]|striptags}}...</description>
+          {% if post.image %}
+              <media:thumbnail url='http://www.chrispenner.ca/images/{{post.image|safe}}' height='75' width='75' />
+          {% endif %}
       <content:encoded><![CDATA[
           {% if post.image %}
-              <img src="http://www.chrispenner.com/images/{{post.image}}" alt="">
+              <img src="http://www.chrispenner.ca/images/{{post.image|safe}}" alt="{{post.title}}">
           {% endif %}
           {{post.content|safe}}
       ]]></content:encoded>
