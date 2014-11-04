@@ -16,6 +16,5 @@ uiGradients
 reddit
 neovim
 font-awesome
-jekyll
 Vim.js
 perfbar: tracks site performance
