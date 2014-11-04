@@ -390,6 +390,16 @@ footer {
             padding: 0.4em 1em;
         }
     }
+
+    .dark &{
+        table{
+            border: 1px solid $night-white;
+
+            td{
+                border: 1px solid $night-white;
+            }
+        }
+    }
 }
 
 .pager-title {

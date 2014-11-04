@@ -393,6 +393,10 @@ footer {
     .gem-info table td {
       border: 1px solid #333333;
       padding: 0.4em 1em; }
+  .dark .gem-info table {
+    border: 1px solid #dddddd; }
+    .dark .gem-info table td {
+      border: 1px solid #dddddd; }
 
 .pager-title {
   display: -webkit-box;
