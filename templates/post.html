@@ -6,7 +6,7 @@
         </span>
         <br>
         {% if post.image %}
-    <img style="height:auto; width:auto; max-width:400px;" src="/images/{{post.image}}" alt="{{post.program}} Logo">
+    <img class="post-image" src="/images/{{post.image}}" alt="{{post.program}} Logo">
         <br>
         {% endif %}
         <span class="byline">by {{post.author}}</span>
@@ -34,7 +34,7 @@
 </div>
 {% endblock masthead %}
 {% include "gem-info.html" with context %}
-<article class="page">
+<article class="post">
     {{post.content|safe}}
 
     <br>
