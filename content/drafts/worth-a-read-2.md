@@ -1,17 +1,19 @@
-title: Worth a Read 1 - CSS
+title: Worth a Read 2 - CSS
 author: Chris Penner
-tags:
-template: worth_a_read.html
-image: neovim-logo.png
+categories: Worth-a-read
+tags: CSS
 
+This Worth A Read highlights some articles about CSS. See how the pros do
+things and learn a new trick or two.
 
-This marks the beginning of a new feature, *Worth a Read* will contain a quick
-and easy list of blog posts and articles that I've found interesting recently.
-They may have to do with programming, design, lifestyle, cool products, or
-anything else I've been reading. Might be themed, might not! Hope you enjoy it!
+Follow me on twitter
+[@chrislpenner](http://www.twitter.com/chrislpenner) to keep up with
+future posts!
+
+###Worth a read:
 
 * [Overview of CodePen's CSS Organization and Design](http://codepen.io/chriscoyier/blog/codepens-css)
-* [  ](  )
-* [  ](  )
-* [  ](  )
-* [  ](  )
+* [Learn how to create an icon-filling scroll effect](http://codyhouse.co/gem/icons-filling-effect/)
+* [Why the best designers don't specialize](http://www.hugeinc.com/ideas/perspective/why-the-best-designers-dont-specialize)
+* [The first CSS variable: currentColor](http://demosthenes.info/blog/908/The-First-CSS-Variable-currentColor)
+* [Ten CSS one-liners that replace native-apps](http://alistapart.com/blog/post/ten-css-one-liners-to-replace-native-apps)

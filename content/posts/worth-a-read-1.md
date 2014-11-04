@@ -3,7 +3,6 @@ author: Chris Penner
 date: Oct. 31st 2014
 categories: Worth-a-read
 tags: CSS Typography Python Design
-template: worth-a-read.html
 
 This marks the beginning of a new feature, **Worth a Read**, which will contain a quick
 and easy list of blog posts and articles that I've found interesting recently.

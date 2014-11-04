@@ -3,16 +3,12 @@ Done till Sept 03
 
 CSS
 * [Change the way you set box-sizing with this time-saver](http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/)
-* [Ten CSS one-liners that replace native-apps](http://alistapart.com/blog/post/ten-css-one-liners-to-replace-native-apps)
-* [Learn how to create an icon-filling scroll effect](http://codyhouse.co/gem/icons-filling-effect/)
 * [Clever uses for Step-Easing Animation](http://css-tricks.com/clever-uses-step-easing/)
 * [Stylish Full Screen Navigation](http://codyhouse.co/gem/full-screen-pop-out-navigation/)
 * [Pure CSS Off-Screen Navigation Menu](http://www.sitepoint.com/pure-css-off-screen-navigation-menu/)
-* [Why the best designers don't specialize](http://www.hugeinc.com/ideas/perspective/why-the-best-designers-dont-specialize)
 * [Vertical Fixed Navigation](http://codyhouse.co/gem/vertical-fixed-navigation/)
 * [Principles of Adaptive Design](http://bradfrost.com/blog/post/the-principles-of-adaptive-design/)
 * [Smooth Page Transitions with SmoothState.js](http://css-tricks.com/add-page-transitions-css-smoothstate-js/)
-* [The first CSS variable: currentColor](http://demosthenes.info/blog/908/The-First-CSS-Variable-currentColor)
 * [How I built a static site generator](http://dbushell.com/2014/07/09/how-i-built-a-static-site-generator/)
 * [Pure CSS Parallax Scrolling](http://keithclark.co.uk/articles/pure-css-parallax-websites/)
 * [Favicons, what you need to know](http://css-tricks.com/favicon-quiz/)

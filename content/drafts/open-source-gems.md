@@ -9,12 +9,10 @@ parsedatetime : python parser
 duckling : parse everything clojure Java
 beautiful soup: html tree
 unix
-git
 vlc
 julia
 uiGradients
 reddit
-neovim
 font-awesome
 Vim.js
 perfbar: tracks site performance
