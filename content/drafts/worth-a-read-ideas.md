@@ -23,10 +23,7 @@ CSS
 * [Tab Styling Inspiration](http://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/)
 
 Typography
-* [List of the best (FREE!) Google Webfonts](http://hellohappy.org/beautiful-web-type/)
-* [Typ.io: Matching headings with body text](http://lifehacker.com/typ-io-recommends-matching-fonts-for-better-design-1621067128)
-* [Ten Dollar Fonts!](http://tendollarfonts.com/)
-* [Handpicked font-pairs from Google Webfonts](http://femmebot.github.io/google-type/)
+* [Overview of the basics of typography](http://www.gravitateonline.com/marketing-101/design-learning-center/typography-design/typography-overview)
 
 Python
 * [Why python users stick around](http://nothingbutsnark.svbtle.com/why-i-dont-worry-about-pythons-popularity)
