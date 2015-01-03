@@ -47,14 +47,19 @@ Javascript
 
 Tools
 * [Pocket Lock automatically locks your phone](http://lifehacker.com/pocket-lock-switches-phones-screen-on-off-when-you-aren-1620686296)
-* [Configure Sublime Text for Python development](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
 * [The Story of Alfred](http://rosedigital.co.uk/blog/2014/08/06/dynamic-logos-with-css.html)
-* [How to use Vim for Structure and Interpretation of Computer Programs(Lisp/Scheme)](http://usevim.com/2014/08/27/vim-sicp/)
 * [Jekyll for building static sites quickly](http://code.tutsplus.com/tutorials/using-jekyll--cms-20956)
+
+Text-editors
+* [Don't put the cart before the horse when it comes to text-editors](http://devblog.avdi.org/2012/10/16/lets-stop-telling-programming-newbies-to-learn-vim-or-emacs/)
+* [Configure Sublime Text for Python development](https://realpython.com/blog/python/setting-up-sublime-text-3-for-full-stack-python-development/)
+* [How to use Vim for Structure and Interpretation of Computer Programs(Lisp/Scheme)](http://usevim.com/2014/08/27/vim-sicp/)
 * [Batch convert text files to other formats with OSX command line](http://lifehacker.com/batch-convert-text-files-to-different-formats-in-termin-1628493934)
 * [Emacs "Evil" Mode](http://usevim.com/2014/09/03/emacs-evil-mode/)
 * [From vim to emacs](http://juanjoalvarez.net/es/detail/2014/sep/19/vim-emacsevil-chaotic-migration-guide/)
 * [Good Vimrc building intro](http://bling.github.io/blog/2013/02/10/love-affair-with-vim/)
+* [Which editor should I use?](http://blog.teamtreehouse.com/which-text-editor-should-i-use)
+
 
 UX
 * [List of clear and concise user interface design tips](http://bokardo.com/principles-of-user-interface-design/)
