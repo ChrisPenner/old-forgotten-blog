@@ -11,7 +11,7 @@ image: git-logo.png
 links: Git|http://git-scm.com/, Github|https://github.com/git/git
 
 Naturally Git will make it on this list sooner or later, might as well git it
-over with. If you haven't heard of git yet I'm surprised you made it here.
+over with.
 
 Git is a distributed version control system that has taken the
 open-source world by storm. In contrast with most previous version
