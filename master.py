@@ -1,5 +1,4 @@
 import webapp2
-import math
 import dbwrap
 import posts
 from handler import Handler
@@ -82,17 +81,6 @@ class RSS(Handler):
         self.render('rss.xml', posts=dbwrap.post_list)
 
 
-class PostPager(Handler):
-    def get(self, page):
-        if not page:
-            page = 1
-        posts = dbwrap.post_list
-        per_page = 6
-# figure out how many pages we need
-        num_pages = int(math.ceil(len(posts) / per_page))
-        self.render('pager.html', page=page, num_pages=num_pages, posts=posts)
-
-
 class FourOhFour(Handler):
     def get(self):
         self.redirect('/')
@@ -100,7 +88,6 @@ class FourOhFour(Handler):
 app = webapp2.WSGIApplication([
     ('/', Contents),
     ('/post/([^/]+)', PostHandler),
-    ('/posts/?([^/]*)', PostPager),
     ('/tag/([^/]+)', TagHandler),
     ('/category/([^/]+)', CategoryHandler),
     ('/feed', RSS),
