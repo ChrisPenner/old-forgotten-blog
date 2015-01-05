@@ -1,8 +1,8 @@
 title: Gem: Git
 author: Chris Penner
-date: ######
+date: Jan 5 2015
 tags: open-source git
-categories: Open-source-gems
+categories: open-source-gems
 language: C, shell
 state: Released
 type: Version-Control
