@@ -10,8 +10,10 @@ program: Git
 image: git-logo.png
 links: Git|http://git-scm.com/, Github|https://github.com/git/git
 
-Naturally Git will make it on this list sooner or later, might as well git it
-over with.
+Speaking of open-source gems, it's tough to make it too far into this topic
+without mentioning Git. If you've been at all involved in the open source
+community recently then you're certainly familiar with it already. If not, then
+learning Git is a great place to start your journey into open-source tech.
 
 Git is a distributed version control system that has taken the
 open-source world by storm. In contrast with most previous version
