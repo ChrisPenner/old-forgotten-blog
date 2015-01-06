@@ -1,6 +1,6 @@
 title: Procedural Generation is the Future
 author: Chris Penner
-date: Jan 3 2014
+date: Jan 3 2015
 tags: programming
 image: no-mans-sky.png
 
