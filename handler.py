@@ -1,3 +1,6 @@
+"""
+Defines main handler superclass.
+"""
 import os
 import jinja2
 import webapp2
