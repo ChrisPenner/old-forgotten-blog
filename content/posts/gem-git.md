@@ -1,7 +1,7 @@
 title: Gem: Git
 author: Chris Penner
 date: Jan 5 2015
-tags: open-source git
+tags: open-source git linux mac windows
 categories: open-source-gems
 language: C, shell
 state: Released
