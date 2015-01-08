@@ -1,13 +1,21 @@
+"""
+Parses and loads posts from files into storage.
+"""
 import dbwrap
-import re
+import config
 
 from lib import markdown2
 from lib import parsedatetime
 import datetime
 import os
+import re
 
 
 class Post(object):
+    """
+    Holds all information regarding an individual blog post.
+    """
+
     def __init__(self, title='', name='', content='', date='', author='',
                  tags=set(), categories=set(), **kwargs
                  ):
@@ -19,7 +27,7 @@ class Post(object):
         self.name = name
         self.author = author
         self.content = content
-        self.link = "http://www.chrispenner.ca/post/" + name
+        self.link = config.site_root + "post/" + name
         self.tags = tags
         self.categories = categories
         allowed_values = ('platforms', 'language', 'state', 'sites',
@@ -30,6 +38,9 @@ class Post(object):
 
 
 def init():
+    """
+    Scans and converts all post documents into post objects.
+    """
     md = markdown2.Markdown()
     dir_path = 'content/posts'
     file_list = [f for f in os.listdir(dir_path) if not f.startswith('.')]
@@ -57,7 +68,7 @@ def init():
                         html_links = []
                         for link in links:
                             (text, href) = link.split('|')
-                            html_link = '<a href="%s"> %s </a>' %(href, text)
+                            html_link = '<a href="%s"> %s </a>' % (href, text)
                             html_links.append(html_link)
                         html_links = filter(lambda x: '' != x, html_links)
                         value = ','.join(html_links)
@@ -75,10 +86,16 @@ def init():
 
 
 def add_post(post):
+    """
+    Adds a post to storage.
+    """
     dbwrap.put(post.name, post)
 
 
 def get_adj_posts(post_name):
+    """
+    Returns a tuple of (previous post, next post)
+    """
     post_names = [p.name for p in dbwrap.post_list]
     if post_name in post_names:
         index = post_names.index(post_name)
@@ -97,6 +114,10 @@ def get_adj_posts(post_name):
 
 
 def parse_date(date):
+    """
+    Receives string date, Returns tuple of string date, sortable date,
+    shortened date
+    """
     months = {1: 'Jan',
               2: 'Feb',
               3: 'Mar',
@@ -138,4 +159,5 @@ def parse_date(date):
     return date, sort_date, pub_date
 
 
+# Call init when booting up application.
 init()
