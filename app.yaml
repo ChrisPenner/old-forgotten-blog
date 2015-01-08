@@ -14,9 +14,6 @@ handlers:
 - url: /images
   static_dir: content/images
 
-- url: /blog/.*
-  script: blog.app
-
 - url: /.*
   script: master.app
 

@@ -1,3 +1,6 @@
+"""
+Contains route handlers.
+"""
 import webapp2
 import dbwrap
 import posts
@@ -5,6 +8,9 @@ from handler import Handler
 
 
 class Contents(Handler):
+    """
+    Serves table of contents.
+    """
     def get(self):
         post_list = dbwrap.post_list
         tags = sorted(dbwrap.tags)
@@ -14,6 +20,9 @@ class Contents(Handler):
 
 
 class PostHandler(Handler):
+    """
+    Serves a specific post by post-name.
+    """
     def get(self, post_name):
         if not post_name:
             self.redirect('/')
@@ -34,6 +43,9 @@ class PostHandler(Handler):
 
 
 class TagHandler(Handler):
+    """
+    Serves posts associated with a tag.
+    """
     def get(self, tag):
         if not tag:
             self.redirect('/')
@@ -50,6 +62,9 @@ class TagHandler(Handler):
 
 
 class CategoryHandler(Handler):
+    """
+    Serves posts associated with a category.
+    """
     def get(self, category):
         if not category:
             self.redirect('/')
@@ -65,23 +80,19 @@ class CategoryHandler(Handler):
                     tags=tags, categories=categories)
 
 
-class About(Handler):
-    def get(self):
-        self.render('about.html')
-
-
-class Contact(Handler):
-    def get(self):
-        self.render('contact.html')
-
-
 class RSS(Handler):
+    """
+    Serves RSS feed page.
+    """
     def get(self):
         self.response.headers['Content-Type'] = "application/rss+xml"
         self.render('rss.xml', posts=dbwrap.post_list)
 
 
 class FourOhFour(Handler):
+    """
+    Redirects all other URLs to contents page.
+    """
     def get(self):
         self.redirect('/')
 
@@ -92,4 +103,4 @@ app = webapp2.WSGIApplication([
     ('/category/([^/]+)', CategoryHandler),
     ('/feed', RSS),
     ('.*', FourOhFour),
-], debug=True)
+], debug=False)
