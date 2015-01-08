@@ -93,7 +93,7 @@ blockquote {
     border-left: 5px solid rgba(76, 76, 76, 0.9);
     margin: auto; }
 
-ul {
+ul, ol {
   list-style-position: inside;
   margin: 1em 0 1em 1em; }
 
