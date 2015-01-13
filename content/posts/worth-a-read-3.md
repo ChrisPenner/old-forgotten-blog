@@ -1,8 +1,8 @@
 title: Worth a Read #3 - Typography
 author: Chris Penner
-date:
+date: Jan 13 2015
 categories: Worth-a-read
-tags: CSS
+tags: typography
 
 This time we're talking typography. Some would say that good web-design is
 90-99% typography. I'll let you decide whether you want to believe that, but
