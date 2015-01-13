@@ -140,7 +140,9 @@ def parse_date(date):
     date_obj = datetime.date(sort_date[0], sort_date[1], sort_date[2])
     pub_date = date_obj.strftime("%a, %d %b %Y %H:%M:%S GMT")
 
-    if day[-1] == '1':
+    if len(day) > 1 and day[0] == '1':
+        suffix = 'th'
+    elif day[-1] == '1':
         suffix = 'st'
     elif day[-1] == '2':
         suffix = 'nd'
