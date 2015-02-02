@@ -13,6 +13,5 @@ vlc
 julia
 uiGradients
 reddit
-font-awesome
 Vim.js
 perfbar: tracks site performance
