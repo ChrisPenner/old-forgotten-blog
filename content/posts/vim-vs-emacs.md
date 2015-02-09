@@ -60,10 +60,11 @@ Without further delay, here's a list of objective (see: opinionated) pros and
 cons (take with a grain [or boulder] of salt).
 
 ## Emacs
+
 Emacs is often mocked by Vim users as "A great operating system, lacking only a
 decent editor", while Emacs users would disagree, there's still a shadow of
 truth in this statement. Emacs prides itself on being able to organize your
-projects, write your email, play tetris, compile your code, and even tie your
+projects, write your email, play Tetris, compile your code, and even tie your
 shoes for you in the morning! (Oh and it'll edit text too!)
 
 This means that if you choose Emacs you'll likely end up using Emacs for almost
@@ -87,16 +88,17 @@ difficult to remember later on.
 
 Emacs has **strong** extensibility in the way of plugins and sheer Lisp
 hackability. If there's something you want to do, you can probably find an
-Emacs plugin to help you do it, or build one yourself. Beware customization
-however, as you'll need to learn trace amounts of eLisp to do even simple
-things like change key-mappings (though once you get the hang of it it's
-adaptable and sensible).
+Emacs plugin to help you do it, or build one yourself. You'll need to learn a
+bit of eLisp to do accomplish anything, but it makes sense and comes with a lot
+of power once you get used to it. Though honestly in most cases whichever
+functionality you require is probably already a part of some plugin in the
+repository.
 
 ## Vim
 
 First off, Vim is a modal editor, that is to say that keys on your keyboard
 will do different things depending on which state the editor is in. This is
-both it's weakest strongest and point. Most user interface designers will tell
+both its weakest and strongest point. Most user interface designers will tell
 you that modes should be avoided whenever possible, consult the insightful [Aza
 Raskin](http://www.azarask.in/blog/post/is_visual_feedback_enough_why_modes_kill/)
 for further study. However, in this case the modes are central to the whole
@@ -132,7 +134,11 @@ mappings is that it uses the same interface as normal editing. The mapping you
 need is exactly what you'd type inside the editor. This means that the more you
 learn in the main editor, the more customization options you unlock.
 
-Where Vim currently has trouble is mostly related to concurrency. Vim is
+Unfortunately if you'd like to write any plugins or more complex functions
+you'll need to learn some Vimscript, which honestly is simply an atrocious
+language (nearly everyone agrees).
+
+Another area Vim currently has trouble is mostly related to concurrency. Vim is
 primarily single-threaded and so can't do more than one thing at a time. This
 currently is being addressed in an offshoot called NeoVim, (see my post on that
 [here](http://www.chrispenner.ca/post/gem-neovim)), though it's got a bit of a
@@ -146,7 +152,8 @@ niches at the end of the day, if only we could have both... oh wait! There's a
 way to do that actually. There's a plugin called Evil that emulates Vim's
 modal interface almost flawlessly within Emacs. This allows the quick and
 effective editing commands of Vim within the adaptability and all-inclusiveness
-of Emacs.
+of Emacs. Some would say this is the way to go, the best of both worlds, but
+the jury is still out on this one.
 
 Some things to check out (check back for more posts on getting started soon):
 
