@@ -9,7 +9,7 @@
         {% if categories|length > 0 %}
             <br>
             <span class="categories">
-                Categories: 
+                Categories<br>
                 {% for c in categories %}
                     <a href="/category/{{c}}">{{c|capitalize}},</a>
                 {% endfor %}
@@ -18,7 +18,7 @@
         {% if tags|length > 0 %}
             <br>
             <span class="tags">
-                Tags: 
+                Tags<br>
                 {% for t in tags %}
                     <a href="/tag/{{t}}">{{t|capitalize}},</a>
                 {% endfor %}

@@ -200,6 +200,10 @@ footer {
    font-style: italic;
    line-height: 2em;
    font-family: $sans;
+   width: 100%;
+   max-width: 500px;
+   display: block;
+   margin: auto;
 }
 
 .post {
