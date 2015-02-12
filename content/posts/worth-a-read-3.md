@@ -3,6 +3,7 @@ author: Chris Penner
 date: Jan 13 2015
 categories: Worth-a-read
 tags: typography
+image: typography-t.png
 
 This time we're talking typography. Some would say that good web-design is
 90-99% typography. I'll let you decide whether you want to believe that, but

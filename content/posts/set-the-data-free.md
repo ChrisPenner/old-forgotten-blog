@@ -2,6 +2,7 @@ title: Set the Data Free
 author: Chris Penner
 date: Aug 2nd 2014
 tags: open-source
+image: set-the-data-free.png
 
 So lately I've been noticing something. The way we consume our data is changing, suddenly just having data isn't good enough, it's all about presentation. Most modern data formats such as Microsoft Word documents, Powerpoint Slides and PDFs are increasingly focused on making your data LOOK good.
 
