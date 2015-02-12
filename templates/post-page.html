@@ -1,4 +1,14 @@
 {% extends "blog.html" %}
+{% block metatags %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@chrislpenner">
+    <meta name="twitter:creator" content="@chrislpenner">
+    <meta name="twitter:title" content="{{post.title}}">
+    <meta name="twitter:description" content="{{post.content[0:300]|striptags}}...">
+    {% if post.image %}
+        <meta name="twitter:image:src" content="http://www.chrispenner.ca/images/{{post.image}}">
+    {% endif %}
+{% endblock %}
 {% block title %}{{post.title}}{% endblock %}
 {% block header %}
     {% if prev_post %} <a id="leftarrow" class="arrow" href="/post/{{prev_post}}">&larr;</a> {% endif %}
