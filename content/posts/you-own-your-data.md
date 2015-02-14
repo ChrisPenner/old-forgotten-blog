@@ -2,6 +2,7 @@ title: You Own Your Data
 author: Chris Penner
 date: September 26th 2014
 tags: open-source
+image: security-vs-privacy.jpg
 
 First off, thanks for taking the time to read this, please send me a message on twitter [@chrislpenner](http://www.twitter.com/chrislpenner) if you have ideas or comments, and share this post around if you agree with it.
 
