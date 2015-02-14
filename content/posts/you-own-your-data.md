@@ -2,8 +2,11 @@ title: You Own Your Data
 author: Chris Penner
 date: September 26th 2014
 tags: open-source
+image: security-vs-privacy.jpg
 
 First off, thanks for taking the time to read this, please send me a message on twitter [@chrislpenner](http://www.twitter.com/chrislpenner) if you have ideas or comments, and share this post around if you agree with it.
+
+*Comic used with permission of [Clay Bennett](http://www.claybennett.com/).*
 
 Okay, so what's this whole thing about? To put it in a nutshell for you: our data is important, our data isn't safe, therefore something needs to change. What is Facebook doing with your data? Are they giving it to the NSA? What if my employer finds out about such and such? We spend far too much time worrying about whether our data is safe and what would happen if these businesses that we trust with our virtual lives decide to go bad.
 
