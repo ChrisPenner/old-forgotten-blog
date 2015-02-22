@@ -6,7 +6,6 @@ dotjs : custom js
 slap : sublime for terminal
 Vundle : vim plugins
 parsedatetime : python parser
-duckling : parse everything clojure Java
 beautiful soup: html tree
 unix
 vlc
