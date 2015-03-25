@@ -22,6 +22,10 @@ contents and a site structure. Pretty soon I had a working blog framework that
 I knew from front to back and it was simple enough to extend in any way I could
 imagine.
 
+The result is an adaptable and intuitive framework that for some unknown reason
+I've decided to call "BoxKite". Check out the Source (and installation
+instructions) here: [BoxKite](http://github.com/ChrisPenner/BoxKite)
+
 So why should you try out BoxKite? Well, it depends on what you want to use it
 for; but here are some things that I like about it:
 
@@ -53,3 +57,5 @@ a great way to learn, and you'll understand the whole framework better (and web
 tech as a whole) as a result. This is actually my first try at open-source and
 any sort of distributable project, so take it with a grain of salt, but take a look
 at it, mess around with it, and let me know what you think! Cheers!
+
+[BoxKite at Github](http://github.com/ChrisPenner/BoxKite)
