@@ -1,19 +1,18 @@
-$(document).ready(function(){
-    if (getCookie('theme')=='night') {
-        switchTheme();
-    }
-    $('#theme-button').click(switchTheme);
-});
 function switchTheme(){
-    var $button = $('#theme-button');
-    $('html').toggleClass("dark");
-    if($button.text() == "DAY"){
-        $button.text("NIGHT");
-        setCookie("theme", "night", 2*24*60*60*1000); //Expire in two days
+    var button = document.getElementById("theme-button");
+    var html = document.getElementsByTagName("html")[0];
+    html.classList.toggle("dark");
+
+    if(button.innerHTML == "DAY"){
+        button.innerHTML = "NIGHT";
+        // Expire in two months
+        setCookie("theme", "night", 60*24*60*60*1000);
     } else {
-        $button.text("DAY");
-        setCookie("theme", "day", 2*24*60*60*1000); //Expire in two days
+        button.innerHTML = "DAY";
+        // Expire in two months
+        setCookie("theme", "day", 60*24*60*60*1000);
     }
+    return;
 }
 
 function setCookie(cname,cvalue,extime)
@@ -35,3 +34,12 @@ function getCookie(cname)
     }
     return "";
 }
+
+// Switch theme if cookie is set
+if (getCookie('theme')=='night') {
+    switchTheme();
+}
+
+// Switch theme if button is clicked.
+var button = document.getElementById("theme-button");
+button.addEventListener('click', switchTheme);
