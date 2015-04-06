@@ -89,7 +89,7 @@ blockquote {
 
 ul, ol {
     list-style-position: inside;
-    margin: 1em 0 1em 1em;
+    margin: 1em 0 1em 2em;
 }
 
 em {
@@ -216,11 +216,11 @@ footer {
     padding: 0px 20px;
     margin: 3em auto;
     transition: color 2s;
+    font-size: 1.25em;
 
     p {
-        font-size: 1em;
-        line-height: 1.8em;
-        letter-spacing: 0.05em;
+        line-height: 1.6em;
+        letter-spacing: 0.02em;
         margin: 0.5em 0 0 0;
         hyphens: auto;
         word-break: break-word;
@@ -239,9 +239,9 @@ footer {
 
     ul {
         list-style-type: disc;
+        text-indent: -1em ;
 
         li  {
-            font-size: 1em;
             line-height: 1.3em;
             letter-spacing: 0.05em;
             margin: 0.5em 0 0 0;
