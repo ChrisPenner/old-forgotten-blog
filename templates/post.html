@@ -17,7 +17,7 @@
             <span class="categories">
                 Categories: 
                 {% for c in post.categories|sort %}
-                    <a href="/category/{{c}}">{{c|capitalize}},</a>
+                    <a class="category" href="/category/{{c}}">{{c.replace('-', ' ')|capitalize}}</a>
                 {% endfor %}
             </span>
         {% endif %}
@@ -26,7 +26,7 @@
             <span class="tags">
                 Tagged: 
                 {% for t in post.tags|sort %}
-                    <a href="/tag/{{t}}">{{t|capitalize}},</a>
+                    <a class="tag" href="/tag/{{t}}">{{t.replace('-', ' ')|capitalize}}</a>
                 {% endfor %}
             </span>
         {% endif %}

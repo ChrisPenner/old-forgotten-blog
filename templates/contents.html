@@ -11,7 +11,7 @@
             <span class="categories">
                 Categories<br>
                 {% for c in categories %}
-                    <a href="/category/{{c}}">{{c|capitalize}},</a>
+                    <a class="category" href="/category/{{c}}">{{c.replace('-', ' ')|capitalize}}</a>
                 {% endfor %}
             </span>
         {% endif %}
@@ -20,7 +20,7 @@
             <span class="tags">
                 Tags<br>
                 {% for t in tags %}
-                    <a href="/tag/{{t}}">{{t|capitalize}},</a>
+                    <a class="tag" href="/tag/{{t}}">{{t.replace('-', ' ')|capitalize}}</a>
                 {% endfor %}
             </span>
         {% endif %}

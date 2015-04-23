@@ -206,6 +206,33 @@ footer {
    margin: auto;
 }
 
+a.tag, a.category {
+    padding: 0px 8px;
+    margin: 2px 1px;
+    border-radius: 4px;
+    display: inline-block;
+    color: $day-black;
+    border: 1px solid $gray;
+    transition: 0.3s;
+
+    &:hover{
+        background: $day-black;
+        color: $day-white;
+        text-decoration: none;
+    }
+
+    .dark & {
+    color: $night-white;
+
+    &:hover{
+        background: $night-white;
+        color: $night-black;
+        text-decoration: none;
+    }
+    }
+
+}
+
 .post {
     display: flex;
     flex-flow: column nowrap;
