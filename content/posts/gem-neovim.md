@@ -1,7 +1,7 @@
 title: Gem: Neovim
 author: Chris Penner
 date: Oct. 15th 2014
-tags: open-source text-editor vim mac linux
+tags: open-source Vim
 categories: Open-source-gems
 language: VimL, C
 platforms: Mac, Linux
