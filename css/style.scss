@@ -456,6 +456,11 @@ a.tag, a.category {
 
 // ID Selectors
 
+// Override disqus colors for dark theme.
+.dark #disqus_thread {
+    color: $night-white;
+}
+
 #page{
     margin: 4em 0;
 }
