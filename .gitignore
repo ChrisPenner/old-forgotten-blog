@@ -52,4 +52,10 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# Tagfiles
+.tags
+tags
+!tags/
+
+# Don't track CSS.
 css/style.css
