@@ -6,10 +6,10 @@ threadsafe: true
 
 handlers:
 - url: /css
-  static_dir: css
+  static_dir: app/assets/css
 
 - url: /js
-  static_dir: js
+  static_dir: app/assets/js
 
 - url: /images
   static_dir: content/images
@@ -18,7 +18,7 @@ handlers:
   static_dir: content/other
 
 - url: /.*
-  script: master.app
+  script: app.master.app
 
 libraries:
 - name: jinja2
