@@ -4,8 +4,8 @@ Parses and loads posts from files into storage.
 import dbwrap
 import config
 
-from lib import markdown2
-from lib import parsedatetime
+import markdown2
+import parsedatetime
 import datetime
 import os
 import re
@@ -41,7 +41,7 @@ def init():
     """
     Scans and converts all post documents into post objects.
     """
-    md = markdown2.Markdown()
+    md = markdown2.Markdown(extras=['fenced-code-blocks'])
     dir_path = 'content/posts'
     file_list = [f for f in os.listdir(dir_path) if not f.startswith('.')]
     for file_name in file_list:
