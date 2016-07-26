@@ -51,4 +51,8 @@ technically our function isn't actually recursive anymore and we avoid the limit
 I tested out both versions, the normal version hits the tail-recursion limit at factorial(980) whereas the
 tail-recursive version will happily compute numbers as large as your computer can handle.
 
+There's an [alternative approach](http://code.activestate.com/recipes/474088-tail-call-optimization-decorator/)
+that actually uses stack introspection to do it, but it's a bit more complex than the one
+we built here.
+
 Hope you learned something, cheers!
